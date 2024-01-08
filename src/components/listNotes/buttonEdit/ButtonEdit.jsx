@@ -1,9 +1,10 @@
 import styles from './css/style.module.css';
 
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function ButtonEdit() {
+export default function ButtonEdit({id}) {
   return (
-    <button className={styles.button} type='button'>Edit</button>
+    <Link className={styles.button} to={`/notes/edit/${id}`}>Edit</Link>
   )
 }

@@ -4,6 +4,6 @@ import React from 'react'
 
 export default function ItemText({text}) {
   return (
-    <div>{text}</div>
+    <div className={styles.itemText}>{text}</div>
   )
 }
