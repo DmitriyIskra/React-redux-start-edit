@@ -2,7 +2,6 @@ import styles from './css/style.module.css';
 
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { DELETE_NOTE } from '../../../redux/actions/actions';
 
 import Item from '../item/Item';
 import ItemText from '../text/ItemText';
@@ -12,8 +11,8 @@ import ButtonDelete from '../buttonDelete/ButtonDelete';
 
 import { v4 } from 'uuid';
 
+// Компонент для списка записей
 export default function List() {
-  const dispatch = useDispatch();
   const state = useSelector( (state) => state.notes )
 
   return ( 

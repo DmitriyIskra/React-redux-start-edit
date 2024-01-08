@@ -11,9 +11,9 @@ import NoteSum from '../noteSum/NoteSum';
 import ButtonSave from '../buttonSave/ButtonSave';
 import ButtonCancel from '../buttonCancel/ButtonCancel';
 
-
+// Компонент инпутов
 // Компонент иожет быть использован как для создания записи, так и 
-// для редактирования
+// для редактирования 
 export default function InputWrapper() {
   const dispatch = useDispatch();
   // здесь хранятся все записи (база данных)
@@ -30,10 +30,7 @@ export default function InputWrapper() {
     idRef.current = params.id;
   }
   
-  // получаем нужный объект из state по id
-  // для первой загрузки когда нет id
-  //  создаем объект с пустыми полями
-  
+  // Для заполнения inputs при переходе к редактированию
   useEffect(() => {
     if(params.id) {
       // Находим по id нужный объект
@@ -78,7 +75,6 @@ export default function InputWrapper() {
       // очищаем только при создании, что бы при редактировании
       // пользователю было понятно что это именно редактирование
       // e.target.text.value = '';
-      
       dispatch({
         type: SAVE_INPUT,
         payload: '',
